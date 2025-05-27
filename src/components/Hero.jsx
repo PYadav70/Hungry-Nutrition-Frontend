@@ -5,8 +5,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { assets } from "../assets/assets";
+import { useNavigate } from "react-router-dom";
 
 const EnhancedCarousel = () => {
+  const navigate = useNavigate();
+
+  const handleShopNow = () => {
+    navigate('/shop');
+  };
+
   return (
     <div className="bg-black text-white py-10 w-full">
       <div className="max-w-7xl mx-auto px-8">
@@ -30,7 +37,10 @@ const EnhancedCarousel = () => {
                 <p className="text-lg text-gray-300 mt-4">
                   Ultra Premium 100% Whey Protein | Sugar Free | Lactose Free | Soy Free
                 </p>
-                <button className="bg-white text-black px-6 py-2 mt-6 rounded-lg hover:bg-gray-300">
+                <button 
+                  onClick={handleShopNow}
+                  className="bg-white text-black px-6 py-2 mt-6 rounded-lg hover:bg-gray-300"
+                >
                   Shop now →
                 </button>
               </div>
@@ -55,7 +65,10 @@ const EnhancedCarousel = () => {
                 <p className="text-lg text-gray-300 mt-4">
                   Premium Mass Gainer for Ultimate Muscle Growth.
                 </p>
-                <button className="bg-white text-black px-6 py-2 mt-6 rounded-lg hover:bg-gray-300">
+                <button 
+                  onClick={handleShopNow}
+                  className="bg-white text-black px-6 py-2 mt-6 rounded-lg hover:bg-gray-300"
+                >
                   Shop now →
                 </button>
               </div>
@@ -80,7 +93,10 @@ const EnhancedCarousel = () => {
                 <p className="text-lg text-gray-300 mt-4">
                   Healthy fats for brain and heart health.
                 </p>
-                <button className="bg-white text-black px-6 py-2 mt-6 rounded-lg hover:bg-gray-300">
+                <button 
+                  onClick={handleShopNow}
+                  className="bg-white text-black px-6 py-2 mt-6 rounded-lg hover:bg-gray-300"
+                >
                   Shop now →
                 </button>
               </div>
@@ -102,9 +118,3 @@ const EnhancedCarousel = () => {
 };
 
 export default EnhancedCarousel;
-
-
-
-
-
-
