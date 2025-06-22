@@ -14,7 +14,7 @@ import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Categories from './pages/Categories'
+// import Categories from './pages/Categories'
 
 
 
@@ -29,7 +29,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/shop' element={<Shop/>} />
-        <Route path='/categories' element={<Categories/>} />
+        {/* <Route path='/categories' element={<Categories/>} /> */}
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/product/:productId' element={<Product/>} />
