@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { products } from "../assets/assets";
+
 import { ShopContext } from "../context/ShopContext";
 import { useNavigate } from "react-router-dom";
-import { set } from "mongoose";
+
 
 const SupplementSlider = () => {
   const { currency } = useContext(ShopContext);
