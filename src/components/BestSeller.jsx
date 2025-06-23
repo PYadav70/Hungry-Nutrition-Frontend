@@ -2,12 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 import { ShopContext } from "../context/ShopContext";
 import { useNavigate } from "react-router-dom";
 
 
-const SupplementSlider = () => {
+const BestSeller = () => {
   const { currency } = useContext(ShopContext);
   const {products} = useContext(ShopContext)
   const [bestSeller, setBestSeller] = useState([]);
@@ -76,4 +75,4 @@ const SupplementSlider = () => {
   );
 };
 
-export default SupplementSlider;
+export default BestSeller;
