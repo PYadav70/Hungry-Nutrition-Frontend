@@ -10,7 +10,8 @@ const Cart = () => {
   const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
-    const tempData = [];
+    if (products.length > 0) {
+       const tempData = [];
     for (const itemId in cartItems) {
       if (cartItems[itemId] > 0) {
         tempData.push({
@@ -20,7 +21,10 @@ const Cart = () => {
       }
     }
     setCartData(tempData);
-  }, [cartItems]);
+      
+    }
+   
+  }, [cartItems,products]);
 
   return (
     <div className='border-t pt-14'>
